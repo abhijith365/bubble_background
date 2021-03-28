@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.849);
+}
+
+.container span {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.container span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(https://cdn.pixabay.com/photo/2020/09/28/16/29/leaves-5610361_960_720.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 4s;
+    opacity: 0;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.container span:hover::before {
+    height: 1000%;
+    width: 1000%;
+    transition: 0s;
+    opacity: 1;
+}
